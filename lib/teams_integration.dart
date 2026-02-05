@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:app_crash_logs_to_teams/const.dart';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 class PostToTeams {
@@ -91,7 +92,7 @@ class Facts {
   }
 }
 
-PostToTeams getPostToTeams({required String logsToTeams, String? title,String? subtitle, String? userEmail, String? userPhone, String? ApiBaseUrl, String? teamsApiUrl, String? userToken}) {
+PostToTeams getPostToTeams({required String logsToTeams, String? title,String? subtitle, String? userEmail, String? userPhone, String? apiBaseUrl, String? teamsApiUrl, String? userToken}) {
 
   List<Facts>? facts = [];
   List<Sections>? sections = [];
@@ -113,7 +114,7 @@ PostToTeams getPostToTeams({required String logsToTeams, String? title,String? s
 
 
   facts.add(Facts("Date", DateTime.now().toIso8601String()));
-  facts.add(Facts("URL",ApiBaseUrl));
+  facts.add(Facts("URL",apiBaseUrl));
   facts.add(Facts("Platform", "${CommonConst.instance.appVersion ?? ''} ${platform} ${Platform.localeName}"));
   facts.add(Facts("NumberOfProcessors", Platform.numberOfProcessors.toString()));
   facts.add(Facts("P version", Platform.version.toString()));
@@ -124,7 +125,7 @@ PostToTeams getPostToTeams({required String logsToTeams, String? title,String? s
     facts.add(Facts("Device","${ deviceManufacturer ?? " "} ${ androidDeviceName ?? ""} $androidVersion"));
   }
 
-  facts.add(Facts("User Details", "${userPhone} ${userEmail}"));
+  facts.add(Facts("User Details", "$userPhone $userEmail"));
   facts.add(Facts("Token", userToken));
   facts.add(Facts("Logs", logsToTeams));
 
@@ -142,7 +143,9 @@ PostToTeams getPostToTeams({required String logsToTeams, String? title,String? s
 
 Future<http.Response> sendLogsToTeams(Map<String, dynamic> logsToTeams,String teamsUrl)  async {
   String body = json.encode(logsToTeams);
-  print("body $body");
+  if (kDebugMode) {
+    print("body $body");
+  }
 
   http.Response response = await http.post(
       Uri.parse(teamsUrl),

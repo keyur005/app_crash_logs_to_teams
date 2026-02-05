@@ -30,7 +30,6 @@ Future<void> initializeTeams() async {
 import 'package:app_crash_logs_to_teams/const.dart';
 import 'package:app_crash_logs_to_teams/teams_integration.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 
 class TeamsLogger {
   // Method to initialize Teams logging
