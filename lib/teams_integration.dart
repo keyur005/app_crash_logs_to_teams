@@ -142,7 +142,7 @@ PostToTeams getPostToTeams({required String logsToTeams, String? title,String? s
 
 Future<http.Response> sendLogsToTeams(Map<String, dynamic> logsToTeams,String teamsUrl)  async {
   String body = json.encode(logsToTeams);
-  print("body" + body);
+  print("body $body");
 
   http.Response response = await http.post(
       Uri.parse(teamsUrl),

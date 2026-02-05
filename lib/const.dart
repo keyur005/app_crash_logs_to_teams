@@ -18,16 +18,14 @@ class CommonConst{
   Future<void> config() async {
     PackageInfo packageInfo = await PackageInfo.fromPlatform();
 
-    String? appVersions = packageInfo.version;
-    String? deviceId = packageInfo.version;
 
     if (Platform.isAndroid) {
       androidInfo = await deviceInfoPlugin.androidInfo;
-      deviceId=androidInfo?.id??"";
+      //deviceId=androidInfo?.id??"";
 
     } else {
       iosInfo = await deviceInfoPlugin.iosInfo;
-      deviceId=iosInfo?.identifierForVendor??"";
+      //deviceId=iosInfo?.identifierForVendor??"";
 
     }
 
