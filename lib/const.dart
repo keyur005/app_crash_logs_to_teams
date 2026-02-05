@@ -16,7 +16,7 @@ class CommonConst{
 
 
   Future<void> config() async {
-    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    //PackageInfo packageInfo = await PackageInfo.fromPlatform();
 
 
     if (Platform.isAndroid) {
