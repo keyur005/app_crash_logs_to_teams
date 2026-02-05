@@ -1,5 +1,5 @@
 name: app_crash_logs_to_teams
-version: 1.0.0
+version: 1.0.1
 description: A Dart package to send app crash logs and error details to Microsoft Teams for monitoring.
 homepage: https://github.com/keyur005/app_crash_logs_to_teams
 
