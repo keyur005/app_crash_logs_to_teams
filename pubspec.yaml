@@ -1,5 +1,5 @@
 name: app_crash_logs_to_teams
-version: 1.0.1
+version: 1.0.2
 description: A Dart package to send app crash logs and error details to Microsoft Teams for monitoring.
 homepage: https://github.com/keyur005/app_crash_logs_to_teams
 
@@ -12,8 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+
   cupertino_icons: ^1.0.8
   http: ^1.6.0
   device_info_plus: ^12.3.0
