@@ -22,7 +22,7 @@ To send crash logs to a Microsoft Teams channel, you'll need to set up a webhook
 ## Step 1: Create a Microsoft Teams Channel
 
 You can create either a public or private channel. Here's how:
-Creating a Public Channel:
+- Creating a Public Channel:
 
 1. Open Microsoft Teams.
 2. Go to the team where you want to add the channel.
@@ -32,7 +32,7 @@ Creating a Public Channel:
 6. Set the `Privacy` to `Standard - Accessible to everyone in the team.`
 7. Click `Create.`
 
-Creating a Private Channel:
+- Creating a Private Channel:
 
 1. Open Microsoft Teams.
 2. Go to the team where you want to add the channel.
@@ -58,7 +58,7 @@ Creating a Private Channel:
 
 ## Step 3: Get the Webhook URL
 
-Once the webhook is created:
+- Once the webhook is created:
 
 1. Copy the `Webhook URL.` This URL will be used to send the crash logs to the Microsoft Teams channel.
 
@@ -71,8 +71,8 @@ Once you have the Webhook URL, configure the `app_crash_logs_to_teams` package i
    import 'package:app_crash_logs_to_teams/app_crash_logs_to_teams.dart';
 
    void main() {
-     final crashLogsSender = CrashLogsSender(webhookUrl: 'YOUR_WEBHOOK_URL');
-     crashLogsSender.sendCrashLog(errorDetails);
+       TeamsLogger.initializeTeams('YOUR_WEBHOOK_URL');
+       runApp(const MyApp());
      }
 
 - Replace 'YOUR_WEBHOOK_URL' with the URL you copied earlier.

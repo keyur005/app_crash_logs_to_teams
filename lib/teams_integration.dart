@@ -92,7 +92,7 @@ class Facts {
   }
 }
 
-PostToTeams getPostToTeams({required String logsToTeams, String? title,String? subtitle, String? userEmail, String? userPhone, String? apiBaseUrl, String? teamsApiUrl, String? userToken}) {
+PostToTeams getPostToTeams({required String logsToTeams, String? title,String? subtitle, String? userEmail, String? userPhone, String? apiBaseUrl, String? userToken}) {
 
   List<Facts>? facts = [];
   List<Sections>? sections = [];
