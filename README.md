@@ -14,7 +14,7 @@ This Dart package sends app crash logs and error details to Microsoft Teams for 
    ```yaml
    dependencies:
      app_crash_logs_to_teams: ^1.0.0
-   
+
 ## Setting Up Microsoft Teams
 
 To send crash logs to a Microsoft Teams channel, you'll need to set up a webhook in the channel.
@@ -67,16 +67,18 @@ You can create either a public or private channel. Here's how:
 
 Once you have the Webhook URL, configure the `app_crash_logs_to_teams` package in your Flutter app by adding the URL to the configuration:
 
+
+1. Add this package to your `pubspec.yaml` file:
+
    ```yaml
    import 'package:app_crash_logs_to_teams/app_crash_logs_to_teams.dart';
 
-   void main() {
-       TeamsLogger.initializeTeams('YOUR_WEBHOOK_URL');
-       runApp(const MyApp());
-     }
+     void main() {
+        TeamsLogger.initializeTeams('YOUR_WEBHOOK_URL');
+        runApp(const MyApp());
+       }
 
-- Replace 'YOUR_WEBHOOK_URL' with the URL you copied earlier.
+- Replace 'YOUR_WEBHOOK_URL' with the URL you copied earlier
    
 ## License
-
-This package is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+- This package is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
