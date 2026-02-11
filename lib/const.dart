@@ -2,11 +2,11 @@ import 'dart:io';
 
 import 'package:device_info_plus/device_info_plus.dart';
 
-class CommonConst{
-  CommonConst._();
+class AppConst{
+  AppConst._();
   static String platform = Platform.isAndroid ? "Android" : "iOS";
 
-  static final instance = CommonConst._();
+  static final instance = AppConst._();
   DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
   AndroidDeviceInfo? androidInfo;
   IosDeviceInfo? iosInfo;
@@ -15,21 +15,12 @@ class CommonConst{
 
 
   Future<void> config() async {
-    //PackageInfo packageInfo = await PackageInfo.fromPlatform();
-
-
     if (Platform.isAndroid) {
       androidInfo = await deviceInfoPlugin.androidInfo;
-      //deviceId=androidInfo?.id??"";
-
     } else {
       iosInfo = await deviceInfoPlugin.iosInfo;
-      //deviceId=iosInfo?.identifierForVendor??"";
 
     }
-
-   // await SharedPrefUtils.setVersionCode(appVersions);
-    //await SharedPrefUtils.setDeviceID(deviceId);
   }
 
 }

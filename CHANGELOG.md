@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.4]
+- Logs are now sent in all modes (Debug/Profile/Release).
+
 ## [1.0.3]
 - Update Readme 
 

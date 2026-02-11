@@ -105,17 +105,17 @@ PostToTeams getPostToTeams({required String logsToTeams, String? title,String? s
  String activityTitle = title??"";
  String activitySubtitle = subtitle ?? "Crash Type";
  String activityImage = "https://teamsnodesample.azurewebsites.net/static/img/image5.png";
-  String platform = CommonConst.platform;
-  String? deviceManufacturer =  CommonConst.instance.androidInfo?.manufacturer;
-  String? androidDeviceName =  CommonConst.instance.androidInfo?.model;
-  String? androidVersion =  CommonConst.instance.androidInfo?.version.release;
-  String? iOSDeviceName =  CommonConst.instance.iosInfo?.utsname.machine;
-  String? iOSVersion =  CommonConst.instance.iosInfo?.systemVersion;
+  String platform = AppConst.platform;
+  String? deviceManufacturer =  AppConst.instance.androidInfo?.manufacturer;
+  String? androidDeviceName =  AppConst.instance.androidInfo?.model;
+  String? androidVersion =  AppConst.instance.androidInfo?.version.release;
+  String? iOSDeviceName =  AppConst.instance.iosInfo?.utsname.machine;
+  String? iOSVersion =  AppConst.instance.iosInfo?.systemVersion;
 
 
   facts.add(Facts("Date", DateTime.now().toIso8601String()));
-  facts.add(Facts("URL",apiBaseUrl));
-  facts.add(Facts("Platform", "${CommonConst.instance.appVersion ?? ''} $platform ${Platform.localeName}"));
+  facts.add(Facts("Api Url",apiBaseUrl));
+  facts.add(Facts("Platform", "${AppConst.instance.appVersion ?? ''} $platform ${Platform.localeName}"));
   facts.add(Facts("NumberOfProcessors", Platform.numberOfProcessors.toString()));
   facts.add(Facts("P version", Platform.version.toString()));
 

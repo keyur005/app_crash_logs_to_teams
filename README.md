@@ -76,7 +76,7 @@ Once you have the Webhook URL, configure the `app_crash_logs_to_teams` package i
      void main() {
         TeamsLogger.initializeTeams('YOUR_WEBHOOK_URL');
         runApp(const MyApp());
-       }
+     }
 
 - Replace 'YOUR_WEBHOOK_URL' with the URL you copied earlier
    
