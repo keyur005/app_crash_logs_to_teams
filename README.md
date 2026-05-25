@@ -13,7 +13,7 @@ This Dart package sends app crash logs and error details to Microsoft Teams for 
 
    ```yaml
    dependencies:
-     app_crash_logs_to_teams: ^1.0.5
+     app_crash_logs_to_teams: ^1.0.6
 
 ## Setting Up Microsoft Teams
 

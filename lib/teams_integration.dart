@@ -116,7 +116,7 @@ PostToTeams getPostToTeams({required String logsToTeams, String? title,String? s
   facts.add(Facts("Date", DateTime.now().toIso8601String()));
   facts.add(Facts("Api Url",apiBaseUrl));
   facts.add(Facts("Platform", "${AppConst.instance.appVersion ?? ''} $platform ${Platform.localeName}"));
-  facts.add(Facts("NumberOfProcessors", Platform.numberOfProcessors.toString()));
+  facts.add(Facts("Number Of Processors", Platform.numberOfProcessors.toString()));
   facts.add(Facts("P version", Platform.version.toString()));
 
   if (Platform.isIOS) {
