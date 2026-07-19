@@ -30,4 +30,23 @@ class TeamsLogger {
 
 }
 
+/*
+3.44.0
+
+git add .
+ git commit -m"Upgrade app_crash_logs_to_teams to 1.0.7"
+ git tag v1.0.7
+ git push origin main --tags
+ fvm dart pub publish
+
+$env:Path += ";C:\Users\barav\AppData\Local\Pub\Cache\bin"
+fvm --version
+fvm install 3.44.0
+
+git --version
+dart pub global activate fvm
+*/
+
+
+
 

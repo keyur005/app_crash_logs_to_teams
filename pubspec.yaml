@@ -1,5 +1,5 @@
 name: app_crash_logs_to_teams
-version: 1.0.6
+version: 1.0.7
 description: A Dart package to send app crash logs and error details to Microsoft Teams for monitoring.
 homepage: https://github.com/keyur005/app_crash_logs_to_teams
 
@@ -16,9 +16,9 @@ dependencies:
     sdk: flutter
 
 
-  cupertino_icons: ^1.0.8
+  cupertino_icons: ^1.0.9
   http: ^1.6.0
-  device_info_plus: ^12.3.0
+  device_info_plus: ^13.2.0
 
 dev_dependencies:
   flutter_test:
